@@ -1,0 +1,81 @@
+<html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Práctico 4 - Acumulativo + Flexbox</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  /* Box Model */
+  .caja {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 110px;
+  }
+  .rojo { background-color: red; }
+  .amarillo { background-color: yellow; color: black; }
+  .azul { background-color: blue; }
+
+  /* Posicionamiento */
+  .static { position: static; background: lightgray; padding: 10px; }
+  .relative { position: relative; left: 30px; background: purple; color: white; padding: 10px; }
+  .absolute { position: absolute; top: 500px; left: 50px; background: green; color: white; padding: 10px; }
+  .fixed { position: fixed; bottom: 10px; right: 10px; background: orange; padding: 10px; }
+  .sticky { position: sticky; top: 0; background: pink; padding: 10px; }
+
+  /* Flexbox */
+  .contenedor-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .columna {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid navy;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+  }
+  .col1 { background-color: red; }
+  .col2 { background-color: yellow; color: black; }
+  @media (max-width: 767px) {
+    .columna { flex: 100%; }
+  }
+</style>
+</head>
+<body class="container">
+  <h1>Práctico 4 - Acumulativo + Flexbox</h1>
+
+  <h2>Box Model</h2>
+  <div class="caja rojo">Rojo</div>
+  <div class="caja amarillo">Amarillo</div>
+  <div class="caja azul">Azul</div>
+
+  <h2>Posicionamiento</h2>
+  <div class="static">Static</div>
+  <div class="relative">Relative (Morado)</div>
+  <div class="absolute">Absolute (Verde)</div>
+  <div class="sticky">Sticky</div>
+  <div style="height:500px;"></div>
+  <div class="fixed">Fixed</div>
+
+  <h2>Bootstrap - Columnas Responsivas</h2>
+  <div class="row">
+    <div class="col-md-6 bg-danger text-white p-3">Rojo (Primario)</div>
+    <div class="col-md-6 bg-success text-white p-3">Verde (Secundario)</div>
+  </div>
+
+  <h2>Flexbox - Columnas Responsivas</h2>
+  <div class="contenedor-flex">
+    <div class="columna col1">Rojo</div>
+    <div class="columna col2">Amarillo</div>
+  </div>
+</body>
+</html>
