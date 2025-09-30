@@ -2,82 +2,57 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Práctico 4 - Box Model + Posicionamiento + Bootstrap + Flexbox</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Práctico 1-2-3-4 – Estilos y teoría del color</title>
+
+<!-- Estilos internos -->
 <style>
-  /* Box Model */
-  .caja {
-    width: 150px;
-    height: 150px;
-    margin: 20px;
-    padding: 20px;
-    border: 5px solid black;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    line-height: 110px;
+  h1, h2, h3 {
+    color: darkblue;
+    font-size: 1.8em;
   }
-  .rojo { background-color: red; }
-  .amarillo { background-color: yellow; color: black; }
-  .azul { background-color: blue; }
-
-  /* Posicionamiento */
-  .static { position: static; background: lightgray; padding: 10px; }
-  .relative { position: relative; left: 30px; background: purple; color: white; padding: 10px; }
-  .absolute { position: absolute; top: 500px; left: 50px; background: green; color: white; padding: 10px; }
-  .fixed { position: fixed; bottom: 10px; right: 10px; background: orange; padding: 10px; }
-  .sticky { position: sticky; top: 0; background: pink; padding: 10px; }
-
-  /* Flexbox */
-  .flex-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 3px dashed gray;
-    padding: 20px;
-    margin-top: 30px;
+  p {
+    margin-left: 10%;
+    margin-right: 10%;
+    color: black;
+    text-align: justify;
   }
-  .flex-item {
-    width: 120px;
-    height: 120px;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    line-height: 120px;
-    border-radius: 10px;
-  }
-  .rojo-f { background-color: crimson; }
-  .verde-f { background-color: seagreen; }
-  .azul-f { background-color: royalblue; }
 </style>
+
+<!-- Estilos externos -->
+<link rel="stylesheet" href="estilo.css">
 </head>
-<body class="container">
-  <h1>Práctico 4 - Box Model + Posicionamiento + Bootstrap + Flexbox</h1>
+<body>
+  <!-- Estilo en línea -->
+  <h1 id="tituloPrincipal" style="background-color: lightgray; text-align: center;">
+    Teoría del Color
+  </h1>
 
-  <h2>Box Model</h2>
-  <div class="caja rojo">Rojo</div>
-  <div class="caja amarillo">Amarillo</div>
-  <div class="caja azul">Azul</div>
+  <h2 style="color: green; background-color: beige; text-align: left;">Colores Primarios</h2>
+  <p>
+    En la teoría del color, los colores primarios son los fundamentales. 
+    En el modelo aditivo (RGB) encontramos <span class="destacado">rojo, verde y azul</span>.  
+    En el modelo sustractivo (CMY), los básicos son cian, magenta y amarillo.
+  </p>
 
-  <h2>Posicionamiento</h2>
-  <div class="static">Static</div>
-  <div class="relative">Relative (Morado)</div>
-  <div class="absolute">Absolute (Verde)</div>
-  <div class="sticky">Sticky</div>
-  <div style="height:500px;"></div>
-  <div class="fixed">Fixed</div>
+  <h2 style="color: maroon; background-color: lightpink; text-align: right;">Colores Secundarios</h2>
+  <p class="destacado">
+    Al combinar dos colores primarios obtenemos los secundarios. 
+    Por ejemplo: rojo + amarillo = naranja, azul + amarillo = verde, rojo + azul = violeta.
+  </p>
 
-  <h2>Bootstrap - Columnas Responsivas</h2>
-  <div class="row">
-    <div class="col-md-6 bg-danger text-white p-3">Rojo (Primario)</div>
-    <div class="col-md-6 bg-success text-white p-3">Verde (Secundario)</div>
-  </div>
+  <h2>Colores Complementarios</h2>
+  <p>
+    Los colores complementarios son aquellos que se ubican en posiciones opuestas dentro del círculo cromático.  
+    Ejemplos: <span class="destacado">rojo y verde</span>, <span class="destacado">azul y naranja</span>, 
+    <span class="destacado">amarillo y violeta</span>.  
+    Su uso produce contraste y dinamismo en los diseños.
+  </p>
 
-  <h2>Flexbox</h2>
-  <div class="flex-container">
-    <div class="flex-item rojo-f">Rojo</div>
-    <div class="flex-item verde-f">Verde</div>
-    <div class="flex-item azul-f">Azul</div>
-  </div>
+  <h2>Colores Fríos y Cálidos</h2>
+  <p>
+    Los colores cálidos (rojo, naranja, amarillo) transmiten energía y cercanía.  
+    Los colores fríos (azul, verde, violeta) evocan tranquilidad, frescura y distancia.  
+    <span class="destacado">Saber combinarlos es clave en diseño gráfico y arte.</span>
+  </p>
 </body>
 </html>
